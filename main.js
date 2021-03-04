@@ -10,9 +10,17 @@ const {
     systemPreferences,
     nativeTheme,
     screen,
+    session,
     shell,
     dialog,
 } = require('electron')
+
+const { ElectronBlocker } = require('@cliqz/adblocker-electron')
+const fetch = require('cross-fetch')
+ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
+    blocker.enableBlockingInSession(session.defaultSession)
+})
+
 const path = require('path')
 const isDev = require('electron-is-dev')
 const ClipboardWatcher = require('electron-clipboard-watcher')
@@ -414,7 +422,7 @@ function createWindow() {
             if (settingsProvider.get('settings-last-fm-scrobbler')) {
                 if (
                     lastTrackId !== trackId ||
-                    (lastTrackProgress > progress && progress < 0.20)
+                    (lastTrackProgress > progress && progress < 0.2)
                 ) {
                     if (!trackInfo.isAdvertisement) {
                         clearInterval(updateTrackInfoTimeout)
