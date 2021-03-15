@@ -14,7 +14,7 @@
         "publish:mac": "npx electron-builder --mac -p always --config electron-builder64.yml",
         "publish:lin": "npx electron-builder --linux -p always --config electron-builder64.yml"
     },
-    "repository": "https://github.com/helium5250/ytmdesktop",
+    "repository": "https://github.com/codicate/ytmdesktop",
     "keywords": [
         "Electron",
         "Youtube",
