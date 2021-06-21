@@ -1,5 +1,7 @@
 **Fork of [ytmdesktop](https://github.com/ytmdesktop/ytmdesktop) + [adblocker](https://github.com/ytmdesktop/ytmdesktop)**
 
+Download is in release, `v.13.0-adfree`, windows installer. Enjoy 
+
 ---
 
 [<img alt="Discord" src="https://img.shields.io/badge/Discord-JOIN-GREEN.svg?style=for-the-badge&logo=discord">](https://discord.gg/88P2n2a)
